@@ -170,3 +170,4 @@ C:\CursodotNet\Obrasoft\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.
 C:\CursodotNet\Obrasoft\obj\Debug\net8.0\Obrasoft.csproj.AssemblyReference.cache
 C:\CursodotNet\Obrasoft\obj\Debug\net8.0\Obrasoft.csproj.Up2Date
 C:\CursodotNet\Obrasoft\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\CursodotNet\Obrasoft\obj\Debug\net8.0\Obrasoft.sourcelink.json

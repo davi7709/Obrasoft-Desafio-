@@ -20,6 +20,7 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Número do Documento</th>
                 <th scope="col">Endereço</th>
+                <th scope="col">Numero</th>
                 <th scope="col">Cidade</th>
                 <th scope="col">Estado</th>
                 <th scope="col">Ação</th>
@@ -33,6 +34,7 @@
                     <td>@cliente.Nome</td>
                     <td>@cliente.NrDocumento</td>
                     <td>@cliente.Endereco</td>
+                    <td>@cliente.Numero</td>
                     <td>@(cliente.Cidade != null ? cliente.Cidade.Nome_Cid : "N/A")</td>
                     <td>@(cliente.Estado != null ? cliente.Estado.Nome_Est : "N/A")</td>
                     <td>
