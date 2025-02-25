@@ -1,1 +1,24 @@
+# Ignore pasta bin e obj
+bin/
+obj/
+
+# Ignore arquivos de log
+*.log
+
+# Ignore arquivos de build do Visual Studio
 .vs/
+.vscode/
+
+# Ignore arquivos do sistema
+Thumbs.db
+ehthumbs.db
+
+# Ignore arquivos temporários
+*.tmp
+
+# Ignore pastas de configuração do Visual Studio
+.vs2019/
+.vs2017/
+
+# Ignore wwwroot
+/wwwroot/
