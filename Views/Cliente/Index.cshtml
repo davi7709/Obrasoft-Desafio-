@@ -1,0 +1,55 @@
+﻿@model List<Obrasoft.Models.Cliente>  // Passando a lista de clientes
+
+@{
+    ViewData["Title"] = "Listagem de Clientes";
+}
+
+<div class="text-center">
+    <div class="d-grip gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-primary" role="button" asp-controller="Cliente" asp-action="Criar">Adicionar cliente</a>
+    </div>
+
+    <br />
+
+    <h1 class="display-4">Lista de Clientes</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Número do Documento</th>
+                <th scope="col">Endereço</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cliente in Model)
+            {
+                <tr>
+                    <th scope="row">@cliente.Id</th>
+                    <td>@cliente.Nome</td>
+                    <td>@cliente.NrDocumento</td>
+                    <td>@cliente.Endereco</td>
+                    <td>@(cliente.Cidade != null ? cliente.Cidade.Nome_Cid : "N/A")</td>
+                    <td>@(cliente.Estado != null ? cliente.Estado.Nome_Est : "N/A")</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a role="button" class="btn btn-primary"
+                               asp-controller="Cliente"
+                               asp-action="Editar"
+                               asp-route-id="@cliente.Id">Editar</a>
+
+                            <a role="button" class="btn btn-danger"
+                               asp-controller="Cliente"
+                               asp-action="ExcluirConfirmacao"
+                               asp-route-id="@cliente.Id">Excluir</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
