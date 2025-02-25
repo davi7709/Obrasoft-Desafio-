@@ -22,6 +22,17 @@ namespace Obrasoft.Controllers
             return View();
         }
 
+        public IActionResult Editar(int id)
+        {
+            var cliente = _clienteRepository.ObterPorId(id);
+            if (cliente == null)
+            {
+                return NotFound("Cliente não encontrado.");
+            }
+            return View(cliente);
+        }
+
+        [HttpPut]
         public IActionResult Editar()
         {
             return View();

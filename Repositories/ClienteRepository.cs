@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
 using Obrasoft.Data;
 using Obrasoft.Models;
 
@@ -26,6 +27,11 @@ namespace Obrasoft.Repositories
                 .ToList();
         }
 
+        public Cliente? ObterPorId(int id)
+        {
+            return _obrasoftDbContext.Clientes.Find(id);
+        }
+
         public bool Deletar (int id)
         {
             var cliente = _obrasoftDbContext.Clientes.Find(id);
@@ -42,17 +48,13 @@ namespace Obrasoft.Repositories
         public bool Editar(Cliente cliente)
         {
             var clienteExistente = _obrasoftDbContext.Clientes.Find(cliente.Id);
-            if (clienteExistente == null)
-            {
-                return false;
-            }
+            if (clienteExistente == null) return false;
 
             _obrasoftDbContext.Entry(clienteExistente).CurrentValues.SetValues(cliente);
-            _obrasoftDbContext.SaveChanges();
-
-            return true;
+            return _obrasoftDbContext.SaveChanges() > 0;
         }
 
-        
+
+
     }
 }

@@ -7,5 +7,11 @@ namespace Obrasoft.Repositories
         Cliente Adicionar(Cliente cliente);
 
         List<Cliente> ObterTodos();
+
+        bool Editar(Cliente cliente);
+
+        bool Deletar(int Id);
+
+        Cliente? ObterPorId(int Id);
     }
 }
