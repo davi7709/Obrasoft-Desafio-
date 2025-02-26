@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Obrasoft")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+107fe1b82152e38dee02ff90ffe40fbcbe3bcb7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9679c43d9bf6c803568b8d4620280b28f641128a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Obrasoft")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Obrasoft")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

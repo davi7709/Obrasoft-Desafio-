@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Diagnostics.CodeAnalysis;
+using Microsoft.AspNetCore.Mvc;
 using Obrasoft.Models;
 using Obrasoft.Repositories;
 
@@ -32,10 +33,15 @@ namespace Obrasoft.Controllers
             return View(cliente);
         }
 
-        [HttpPut]
-        public IActionResult Editar()
+        [HttpPost]
+        public IActionResult Editar(Cliente cliente)
         {
-            return View();
+            bool atualizado = _clienteRepository.Editar(cliente);
+            if (!atualizado)
+            {
+                return NotFound("Erro ao atualizar o cliente.");
+            }
+            return RedirectToAction("Index");
         }
 
         public IActionResult ExcluirConfirmacao()
