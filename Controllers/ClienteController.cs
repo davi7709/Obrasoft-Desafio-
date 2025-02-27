@@ -18,11 +18,6 @@ namespace Obrasoft.Controllers
             return View(clientes);
         }
 
-        public IActionResult Criar()
-        {
-            return View();
-        }
-
         public IActionResult Editar(int id)
         {
             var cliente = _clienteRepository.ObterPorId(id);
@@ -44,14 +39,32 @@ namespace Obrasoft.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult ExcluirConfirmacao()
+        public IActionResult Criar()
         {
             return View();
         }
 
-        public IActionResult Excluir()
+        public IActionResult ExcluirConfirmacao(int id)
         {
-            return View();
+            var cliente = _clienteRepository.ObterPorId(id);
+            if (cliente == null)
+            {
+                return NotFound("Cliente não encontrado.");
+            }
+            return View(cliente);
+        }
+
+        [HttpPost]
+        public IActionResult Excluir(int id)
+        {
+            bool excluido = _clienteRepository.Deletar(id);
+
+            if (!excluido)
+            {
+                return NotFound("Erro ao excluir cliente.");
+            }
+
+            return RedirectToAction("Index");
         }
 
         [HttpPost]

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Obrasoft.Controllers;
 using Obrasoft.Data;
@@ -33,19 +34,27 @@ namespace Obrasoft.Repositories
             return _obrasoftDbContext.Clientes.FirstOrDefault(x => x.Id == id);
         }
 
-        public bool Deletar (int id)
+        [HttpPost]
+        public bool Deletar(int id)
         {
-            var cliente = _obrasoftDbContext.Clientes.Find(id);
-
-            if (cliente == null)
+            try
             {
+                var clienteExistente = _obrasoftDbContext.Clientes.FirstOrDefault(c => c.Id == id);
+
+                if (clienteExistente == null)
+                    return false; 
+
+                _obrasoftDbContext.Clientes.Remove(clienteExistente);
+                return _obrasoftDbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao deletar cliente: {ex.Message}");
                 return false;
             }
-            _obrasoftDbContext.Clientes.Remove(cliente);
-            _obrasoftDbContext.SaveChanges ();
-
-            return true;
         }
+
+
         public bool Editar(Cliente cliente)
         {
             var clienteExistente = ObterPorId(cliente.Id);

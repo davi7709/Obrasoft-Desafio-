@@ -1,11 +1,15 @@
-﻿@{
+﻿@model Cliente
+@{
     ViewData["Title"] = "Confirmação apagar Cliente";
 }
 
 <div class="text-center">
-    <h1 class="display-6">Deseja excluir (Davi)</h1>
+    <h1 class="display-6">Deseja excluir (@Model.Nome)?</h1>
 </div>
 
 <a class="btn btn-primary" role="button" asp-controller="Cliente" asp-action="Index">Cancelar</a>
-<a class="btn btn-danger" role="button" asp-controller="Cliente" asp-action="Excluir">Ok</a>
 
+<form asp-controller="Cliente" asp-action="Excluir" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit" class="btn btn-danger">Ok</button>
+</form>
