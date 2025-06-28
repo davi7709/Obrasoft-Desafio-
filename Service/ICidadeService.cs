@@ -1,11 +1,13 @@
 ﻿using Obrasoft.Models;
 
-namespace Obrasoft.Repositories
+namespace Obrasoft.Service
 {
-    public interface ICidadeRepository
+    public interface ICidadeService
     {
         Task<List<Cidade>> GetCidadeEstado(int estadoId);
 
         Task<List<Cidade>> GetCidade();
+
     }
+
 }

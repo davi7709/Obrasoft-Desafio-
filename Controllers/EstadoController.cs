@@ -1,21 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Obrasoft.Models;
 using Obrasoft.Repositories;
+using Obrasoft.Service;
 
 namespace Obrasoft.Controllers
 {
     public class EstadoController : Controller
     {
-        private readonly IEstadoRepository _estadoRepository;
+        private readonly IEstadoService _estadoService;
 
-        public EstadoController(IEstadoRepository estadoRepository)
+        public EstadoController(IEstadoService estadoService)
         {
-            _estadoRepository = estadoRepository;
+            _estadoService = estadoService;
         }
         [HttpGet]
-        public IActionResult GetEstado()
+        public async Task<IActionResult> GetEstado()
         {
-            List<Estado> estados= _estadoRepository.GetEstado().ToList();
+            List<Estado> estados = await _estadoService.GetEstados();
             return Json(estados);
         }
 

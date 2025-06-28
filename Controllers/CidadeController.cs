@@ -1,23 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Obrasoft.Models;
-using Obrasoft.Repositories;
+using Obrasoft.Service;
 
 namespace Obrasoft.Controllers
 {
     public class CidadeController : Controller
     {
-        private readonly ICidadeRepository _cidadeRepository;
+        private readonly ICidadeService _cidadeService;
 
-        public CidadeController(ICidadeRepository cidadeRepository)
+        public CidadeController(ICidadeService cidadeService)
         {
-            _cidadeRepository = cidadeRepository;
+            _cidadeService = cidadeService;
         }
 
         [HttpGet]
-        public IActionResult GetCidadeEstado(int estadoId) 
+        public async Task<IActionResult> GetCidadeEstado(int estadoId)
         {
-            List<Cidade> cidades = _cidadeRepository.GetCidadeEstado(estadoId);
-            return Json(cidades);
+            return Json(await _cidadeService.GetCidadeEstado(estadoId));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetCidade()
+        {
+            return Json(await _cidadeService.GetCidade());
         }
     }
 }

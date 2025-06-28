@@ -13,11 +13,11 @@ namespace Obrasoft.Repositories
             _ObrasoftDbContext = ObrasoftDbContext;
         }
 
-        public List<Estado> GetEstado()
+        public async Task<List<Estado>> GetEstado()
         {
-            return _ObrasoftDbContext.Estados
+            return await _ObrasoftDbContext.Estados
                                 .Include(e => e.Cidades)  // Inclui as cidades do estado
-                                .ToList();
+                                .ToListAsync();
         }
     }
 }

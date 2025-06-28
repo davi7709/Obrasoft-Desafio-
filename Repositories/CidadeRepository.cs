@@ -1,4 +1,5 @@
-﻿using Obrasoft.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using Obrasoft.Data;
 using Obrasoft.Models;
 
 namespace Obrasoft.Repositories
@@ -12,11 +13,16 @@ namespace Obrasoft.Repositories
             _obrasoftDbContext = ObrasoftDbContext;
         }
 
-        public List<Cidade> GetCidadeEstado(int estadoId)
+        public async Task<List<Cidade>> GetCidadeEstado(int estadoId)
         {
-            return _obrasoftDbContext.Cidades
+            return await _obrasoftDbContext.Cidades
                                 .Where(c => c.EstadoId == estadoId)
-                                .ToList();
+                                .ToListAsync();
+        }
+
+        public async Task<List<Cidade>> GetCidade()
+        {
+            return await _obrasoftDbContext.Cidades.ToListAsync();
         }
     }
 }

@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Obrasoft.Data;
 using Obrasoft.Repositories;
+using Obrasoft.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,9 @@ builder.Services.AddDbContext<ObrasoftDbContext>(options =>
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<IEstadoRepository, EstadoRepository>();
 builder.Services.AddScoped<ICidadeRepository, CidadeRepository>();
+builder.Services.AddScoped<IClienteService, ClienteService>();
+builder.Services.AddScoped<IEstadoService, EstadoService>();
+builder.Services.AddScoped<ICidadeService, CidadeService>();
 
 
 var app = builder.Build();

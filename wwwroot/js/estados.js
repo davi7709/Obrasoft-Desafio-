@@ -1,4 +1,9 @@
-﻿$(document).ready(function () {
+﻿// @ts-nocheck
+
+$(function () {
+    var $estadoDropdown = $("#estado");
+    var $cidadeDropdown = $("#cidade");
+
     // Carregar Estados no dropdown
     $.ajax({
         url: '/Estado/GetEstado',
@@ -11,6 +16,19 @@
         },
         error: function (error) {
             console.error("Erro ao carregar estados:", error);
+        }
+    });
+
+    // Carrega todas as cidades
+    $.ajax({
+        url: '/Cidade/GetCidadeEstado',
+        method: 'GET',
+        success: function (cidades) {
+            console.error("As cidade estão sendo carregadas", cidades);
+            atualizarDropdownCidades(cidades);
+        },
+        error: function (error) {
+            console.error("Erro ao carregar cidades:", error);
         }
     });
 
@@ -33,13 +51,39 @@
                     console.error("Erro ao buscar cidades:", xhr.responseText || error);
                 }
             });
+        } else {
+            // Se nenhum estado for selecionado, mostra todas as cidades
+            $.ajax({
+                url: '/Cidade/GetCidadeEstado',
+                method: 'GET',
+                success: function (cidades) {
+                    atualizarDropdownCidades(cidades);
+                }
+            });
         }
     });
 
-    // Atualizar o dropdown de cidades
+    $cidadeDropdown.change(function () {
+        var cidadeId = $(this).val();
+
+        if (cidadeId) {
+            $.ajax({
+                url: `/Cidade/GetEstadoPorCidade?cidadeId=${cidadeId}`,
+                method: 'GET',
+                success: function (estadoId) {
+                    $estadoDropdown.val(estadoId); // atualiza o dropdown de estado
+                },
+                error: function (error) {
+                    console.error("Erro ao buscar estado por cidade:", error);
+                }
+            });
+        }
+    });
+
+    // Função para atualizar o dropdown de cidades
     function atualizarDropdownCidades(cidades) {
-        var $cidadeDropdown = $("#cidade");
-        $cidadeDropdown.empty();  // Limpa opções anteriores
+        console.log("Cidades estao sendo atualizadas funcao de atualizar OK", cidades);
+        $cidadeDropdown.empty();
         $cidadeDropdown.append('<option value="">Selecione uma cidade</option>');
 
         cidades.forEach(function (cidade) {

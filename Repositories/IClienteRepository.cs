@@ -4,14 +4,17 @@ namespace Obrasoft.Repositories
 {
     public interface IClienteRepository
     {
-        Cliente Adicionar(Cliente cliente);
+        Task<Cliente> Adicionar(Cliente cliente);
 
-        List<Cliente> ObterTodos();
+        Task<List<Cliente>> ObterTodos();
 
-        bool Editar(Cliente cliente);
+        Task<bool> Editar(Cliente cliente);
 
-        bool Deletar(int Id);
+        Task<bool> Deletar(int Id);
 
-        Cliente? ObterPorId(int Id);
+        Task<Cliente?> ObterPorId(int Id);
+
+        Task<Cliente?> ObterPorDocumento(string nrDocumento);
+
     }
 }

@@ -5,6 +5,6 @@ namespace Obrasoft.Repositories
 {
     public interface IEstadoRepository
     {
-        List<Estado> GetEstado();
+        Task<List<Estado>> GetEstado();
     }
 }

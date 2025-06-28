@@ -48,8 +48,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kg75s5j8kw</Fingerprint>
-      <Integrity>/ErVVuBgR7+smnezluB7GvlgTfU6mlMt8O3OeaLhuqM=</Integrity>
+      <Fingerprint>9oe44wcdsz</Fingerprint>
+      <Integrity>t9j7I4GD71qMCeGe2XeIjMIwyKMcLJfqYSRp4UnTMVg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\estados.js'))</OriginalItemSpec>

@@ -40,7 +40,7 @@ namespace Obrasoft.Migrations
 
                     b.HasIndex("EstadoId");
 
-                    b.ToTable("Cidades");
+                    b.ToTable("Cidades", (string)null);
                 });
 
             modelBuilder.Entity("Obrasoft.Models.Cliente", b =>
@@ -78,7 +78,7 @@ namespace Obrasoft.Migrations
 
                     b.HasIndex("EstadoId");
 
-                    b.ToTable("Clientes");
+                    b.ToTable("Clientes", (string)null);
                 });
 
             modelBuilder.Entity("Obrasoft.Models.Estado", b =>
@@ -94,7 +94,7 @@ namespace Obrasoft.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Estados");
+                    b.ToTable("Estados", (string)null);
                 });
 
             modelBuilder.Entity("Obrasoft.Models.Cidade", b =>

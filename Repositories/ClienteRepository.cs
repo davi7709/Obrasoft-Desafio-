@@ -14,38 +14,45 @@ namespace Obrasoft.Repositories
         {
             _obrasoftDbContext = ObrasoftDbContext;
         }
-        public Cliente Adicionar(Cliente cliente)
-        {
-            cliente.Id = 0;
-            _obrasoftDbContext.Clientes.Add(cliente);
-            _obrasoftDbContext.SaveChanges();
-            return cliente;
-        }
-        public List<Cliente> ObterTodos()
-        {
-            return _obrasoftDbContext.Clientes
-                .Include(c => c.Cidade)
-                .Include(c => c.Estado)
-                .ToList();
-        }
-
-        public Cliente? ObterPorId(int id)
-        {
-            return _obrasoftDbContext.Clientes.FirstOrDefault(x => x.Id == id);
-        }
-
-        [HttpPost]
-        public bool Deletar(int id)
+        public async Task<Cliente> Adicionar(Cliente cliente)
         {
             try
             {
-                var clienteExistente = _obrasoftDbContext.Clientes.FirstOrDefault(c => c.Id == id);
+                cliente.Id = 0;
+                _obrasoftDbContext.Clientes.Add(cliente);
+                await _obrasoftDbContext.SaveChangesAsync();
+            }
+            catch (DbUpdateException ex)
+            {
+                throw new Exception("Erro ao adicionar cliente ao banco de dados",ex);
+            }
+            return cliente;
+        }
+        public async Task<List<Cliente>> ObterTodos()
+        {
+            return await _obrasoftDbContext.Clientes
+                .Include(c => c.Cidade)
+                .Include(c => c.Estado)
+                .ToListAsync();
+        }
+
+        public async Task<Cliente?> ObterPorId(int id)
+        {
+            return await _obrasoftDbContext.Clientes.FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+        [HttpPost]
+        public async Task<bool> Deletar(int id)
+        {
+            try
+            {
+                var clienteExistente = await _obrasoftDbContext.Clientes.FirstOrDefaultAsync(c => c.Id == id);
 
                 if (clienteExistente == null)
                     return false; 
 
                 _obrasoftDbContext.Clientes.Remove(clienteExistente);
-                return _obrasoftDbContext.SaveChanges() > 0;
+                return await _obrasoftDbContext.SaveChangesAsync() > 0;
             }
             catch (Exception ex)
             {
@@ -55,9 +62,9 @@ namespace Obrasoft.Repositories
         }
 
 
-        public bool Editar(Cliente cliente)
+        public async Task<bool> Editar(Cliente cliente)
         {
-            var clienteExistente = ObterPorId(cliente.Id);
+            var clienteExistente = await ObterPorId(cliente.Id);
             if (clienteExistente == null)
                 return false;
 
@@ -71,10 +78,13 @@ namespace Obrasoft.Repositories
 
             _obrasoftDbContext.Entry(clienteExistente).State = EntityState.Modified;
 
-            return _obrasoftDbContext.SaveChanges() > 0;
+            return await _obrasoftDbContext.SaveChangesAsync() > 0;
         }
 
-
+        public async Task<Cliente?> ObterPorDocumento (String nrDocumento)
+        {
+            return await _obrasoftDbContext.Clientes.FirstOrDefaultAsync(x => x.NrDocumento == nrDocumento);
+        }
 
 
     }
