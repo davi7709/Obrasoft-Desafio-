@@ -4,6 +4,7 @@ namespace Obrasoft.Service
 {
     public interface IEstadoService
     {
-        Task<List<Estado>> GetEstados();
+        Task<List<Estado>> GetEstado();
+        Task<List<Estado>> GetEstadoECidade();
     }
 }

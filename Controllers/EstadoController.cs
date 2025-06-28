@@ -16,7 +16,7 @@ namespace Obrasoft.Controllers
         [HttpGet]
         public async Task<IActionResult> GetEstado()
         {
-            List<Estado> estados = await _estadoService.GetEstados();
+            List<Estado> estados = await _estadoService.GetEstado();
             return Json(estados);
         }
 

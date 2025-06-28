@@ -22,7 +22,9 @@ namespace Obrasoft.Controllers
         [HttpGet]
         public async Task<IActionResult> GetCidade()
         {
-            return Json(await _cidadeService.GetCidade());
+            List<Cidade> cidades = await _cidadeService.GetCidade();
+
+            return Json(cidades);
         }
     }
 }

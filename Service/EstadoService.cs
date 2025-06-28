@@ -12,9 +12,14 @@ namespace Obrasoft.Service
             _estadoRepository = estadoRepository;
         }
 
-        public async Task<List<Estado>> GetEstados()
+        public async Task<List<Estado>> GetEstado()
         {
             return await _estadoRepository.GetEstado();
+        }
+
+        public async Task<List<Estado>> GetEstadoECidade()
+        {
+            return await _estadoRepository.GetEstadoECidade();
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BT5qNBs/DUedRA6X4Yz8D9/ZLcJjCsxFjzFniqr89l0=",
+  "Hash": "TBrNDxhF3yBk+fSgoqfADpSV4Kbh+Z+IZT7jK5hoHvw=",
   "Source": "Obrasoft",
   "BasePath": "_content/Obrasoft",
   "Mode": "Default",
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9oe44wcdsz",
-      "Integrity": "t9j7I4GD71qMCeGe2XeIjMIwyKMcLJfqYSRp4UnTMVg=",
+      "Fingerprint": "20e6j5gozv",
+      "Integrity": "YrO2hUgPn44kWq+8C2N8zdDLcDG53KUjXFPHbSBzt4E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\estados.js"
@@ -1506,7 +1506,7 @@
       ]
     },
     {
-      "Route": "js/estados.9oe44wcdsz.js",
+      "Route": "js/estados.20e6j5gozv.js",
       "AssetFile": "C:\\CursodotNet\\Obrasoft\\wwwroot\\js\\estados.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1516,7 +1516,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3212"
+          "Value": "1227"
         },
         {
           "Name": "Content-Type",
@@ -1524,11 +1524,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"t9j7I4GD71qMCeGe2XeIjMIwyKMcLJfqYSRp4UnTMVg=\""
+          "Value": "\"YrO2hUgPn44kWq+8C2N8zdDLcDG53KUjXFPHbSBzt4E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 28 Jun 2025 02:53:41 GMT"
+          "Value": "Sat, 28 Jun 2025 04:30:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1538,7 +1538,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "9oe44wcdsz"
+          "Value": "20e6j5gozv"
         },
         {
           "Name": "label",
@@ -1546,7 +1546,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-t9j7I4GD71qMCeGe2XeIjMIwyKMcLJfqYSRp4UnTMVg="
+          "Value": "sha256-YrO2hUgPn44kWq+8C2N8zdDLcDG53KUjXFPHbSBzt4E="
         }
       ]
     },
@@ -1561,7 +1561,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3212"
+          "Value": "1227"
         },
         {
           "Name": "Content-Type",
@@ -1569,11 +1569,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"t9j7I4GD71qMCeGe2XeIjMIwyKMcLJfqYSRp4UnTMVg=\""
+          "Value": "\"YrO2hUgPn44kWq+8C2N8zdDLcDG53KUjXFPHbSBzt4E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 28 Jun 2025 02:53:41 GMT"
+          "Value": "Sat, 28 Jun 2025 04:30:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1583,7 +1583,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-t9j7I4GD71qMCeGe2XeIjMIwyKMcLJfqYSRp4UnTMVg="
+          "Value": "sha256-YrO2hUgPn44kWq+8C2N8zdDLcDG53KUjXFPHbSBzt4E="
         }
       ]
     },
@@ -6366,7 +6366,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Feb 2025 18:28:37 GMT"
+          "Value": "Sat, 28 Jun 2025 04:39:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6403,7 +6403,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Feb 2025 18:28:37 GMT"
+          "Value": "Sat, 28 Jun 2025 04:39:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6448,7 +6448,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Feb 2025 18:28:37 GMT"
+          "Value": "Sat, 28 Jun 2025 04:39:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6493,7 +6493,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Feb 2025 18:28:37 GMT"
+          "Value": "Sat, 28 Jun 2025 04:39:23 GMT"
         },
         {
           "Name": "Cache-Control",

@@ -39,7 +39,7 @@
     <br />
 
     <div class="form-group">
-    <label for="estado">Estado:</label>
+        <label for="estado">Estado:</label>
         <select id="estado" name="EstadoId" asp-for="EstadoId" class="form-control">
             <option value="">Selecione um estado</option>
         </select>
@@ -48,7 +48,7 @@
 
     <div class="form-group">
     <label for="cidade">Cidade:</label>
-        <select id="cidade" name="CidadeId" asp-for="CidadeId"class="form-control">
+        <select id="cidade" name="CidadeId" asp-for="CidadeId" class="form-control">
             <option value="">Selecione uma cidade</option>
         </select>
     </div>
@@ -59,4 +59,4 @@
 </form>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="/js/estados.js"></script>
+<script src="~/js/estados.js" asp-append-version="true"></script>

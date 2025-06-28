@@ -17,14 +17,7 @@ namespace Obrasoft.Service
         }
         public async Task<List<Cidade>> GetCidadeEstado(int estadoId)
         {
-            var cidadeDoEstado = await _cidadeRepository.GetCidadeEstado(estadoId);
-
-            if(cidadeDoEstado == null || !cidadeDoEstado.Any())
-            {
-                return await _cidadeRepository.GetCidade();
-            }
-
-            return cidadeDoEstado;
+            return await _cidadeRepository.GetCidadeEstado(estadoId);
         }
     }
 }
