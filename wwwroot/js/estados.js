@@ -32,4 +32,28 @@
             console.error("Erro ao carregar cidades:", error);
         }
     });
+
+    
+    $("#estado").change(function () {
+        var estadoId = $(this).val();
+        var selectCidade = $("#cidade");
+
+        selectCidade.empty();
+        selectCidade.append('<option value="">Selecione uma cidade</option>');
+
+        if (estadoId) {
+            $.ajax({
+                url: '/Cidade/GetCidadeEstado?estadoId=' + estadoId,
+                method: 'GET',
+                success: function (cidades) {
+                    cidades.forEach(function (cidade) {
+                        selectCidade.append(new Option(cidade.nome_Cid, cidade.id));
+                    });
+                },
+                error: function (error) {
+                    console.error("Erro ao carregar cidades filtradas:", error);
+                }
+            });
+        }
+    });
 });

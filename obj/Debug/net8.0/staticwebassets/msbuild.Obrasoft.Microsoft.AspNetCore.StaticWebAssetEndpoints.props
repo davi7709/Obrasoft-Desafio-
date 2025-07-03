@@ -24,17 +24,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Feb 2025 17:34:16 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Obrasoft/js/estados.20e6j5gozv.js">
+    <StaticWebAssetEndpoint Include="_content/Obrasoft/js/estados.169cwz3a6v.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\estados.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"20e6j5gozv"},{"Name":"integrity","Value":"sha256-YrO2hUgPn44kWq\u002B8C2N8zdDLcDG53KUjXFPHbSBzt4E="},{"Name":"label","Value":"_content/Obrasoft/js/estados.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1227"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022YrO2hUgPn44kWq\u002B8C2N8zdDLcDG53KUjXFPHbSBzt4E=\u0022"},{"Name":"Last-Modified","Value":"Sat, 28 Jun 2025 04:30:46 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"169cwz3a6v"},{"Name":"integrity","Value":"sha256-lwrxHKd/EhSltZKYTlU3IKmuSo4E5Y0M4M6p5jyIxjI="},{"Name":"label","Value":"_content/Obrasoft/js/estados.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2033"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022lwrxHKd/EhSltZKYTlU3IKmuSo4E5Y0M4M6p5jyIxjI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 03 Jul 2025 03:28:41 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Obrasoft/js/estados.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\estados.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-YrO2hUgPn44kWq\u002B8C2N8zdDLcDG53KUjXFPHbSBzt4E="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1227"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022YrO2hUgPn44kWq\u002B8C2N8zdDLcDG53KUjXFPHbSBzt4E=\u0022"},{"Name":"Last-Modified","Value":"Sat, 28 Jun 2025 04:30:46 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-lwrxHKd/EhSltZKYTlU3IKmuSo4E5Y0M4M6p5jyIxjI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2033"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022lwrxHKd/EhSltZKYTlU3IKmuSo4E5Y0M4M6p5jyIxjI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 03 Jul 2025 03:28:41 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Obrasoft/js/site.b3evy44epu.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
